@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Detail++</title>
+  <link rel="icon" type="image/x-icon" href="static/images/icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <!-- 在 <head> 中添加 MathJax 库 -->
+    <script type="text/javascript" async>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Detail++: Progressive Detail Injection for Training-Free Semantic Binding in Text-to-Image Generation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">Lifeng Chen<sup>1</sup>,</span>
+              <span class="author-block">Jiner Wang<sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://pan-zihao.github.io/" target="_blank">Zihao Pan</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://beierzhu.github.io/" target="_blank">Beier Zhu</a><sup>1, 2</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=99ZjBGoAAAAJ&hl=en"
+                  target="_blank">Xiaofeng Yang</a><sup>1, 2</sup>,</span>
+              <span class="author-block">
+                <a href="https://icoz69.github.io/" target="_blank">Chi Zhang</a><sup>†1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <sup>†</sup>Indicates Corresponding Author.<br>
+              <span class="author-block"><sup>1</sup>AGI Lab, Westlake University,&nbsp;&nbsp;<sup>2</sup>Nanyang Technological
+                University.
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span> -->
+
+                <!-- Supplementary PDF link -->
+                <!-- <span class="link-block">
+                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                  </a>
+                </span> -->
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/CONSTANT1386/Progress-Detail-Injection-for-Accurate-T2I-Generation/tree/main"
+                    target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+
+                  <!-- Gallery Link -->
+                  <span class="link-block">
+                    <a href="#Gallery" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="far fa-images"></i>
+                      </span>
+                      <span>Gallery</span>
+                    </a>
+                  </span>
+
+                  <!-- Demo link -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/spaces/Westlake-AGI-Lab/ProT2I" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <img src="static/images/hf.png" alt="Hugging Face Demo">
+                    </span>
+                    <span>Demo</span>
+                  </a>
+                </span>
+
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser image -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/teaser.png" alt="Teaser Image" height="100%" />
+          <b>A comparison between our method and current state-of-the-art generative models.</b> 
+          The mainstream models often suffer from issues such as semantic overflow, complex attribute mismatching, and style blending. 
+          Even Flux, the leading generative model under the DiT framework, struggles to overcome these challenges. 
+          In contrast, our method, Detail++, based on SDXL, achieves highly accurate semantic binding in a <b><i>training-free</i></b> way.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser image -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Although Text-to-Image (T2I) models have achieved remarkable progress, they still struggle with <b>semantic binding</b>
+              —accurately associating correct attributes with their corresponding subjects in complex prompts. 
+              Existing approaches depend on extensive fine-tuning and user involvement, yet they fail to resolve issues such as attribute overflow and mismatched bindings. 
+              To address these limitations, we propose Detail++, a <b>training-free</b> method that integrates a novel Progressive Detail Injection (PDI) 
+              framework with Centroid Alignment Loss for fine-grained T2I generation. Our method is motivated by the observation that 
+              Self-Attention (SA) maps in Diffusion U-Net preserve structural layout while neglecting decorative details. 
+              Based on this insight, we fix the SA maps and remove all attributes from the prompt, 
+              then progressively reintroduce them one at a time to avoid confusion. 
+              Extensive experiments on T2I-CompBench and our proposed style composition benchmark validate the effectiveness of Detai, 
+              demonstrating its advantages in scenarios with multiple objects and styles where previous methods fall short. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+  <br>
+  <br>
+  <br>
+  
+  <!--Overview image -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Overview</h2>
+        <!-- <div class="columns is-centered has-text-centered"> -->
+        <img src="static/images/overview.png" alt="Paradigm Image" height="100%" />
+        <h2 class="content has-text-justified">
+          <b>The basic process of our method. </b>In the first column, generating complex prompts in a single branch often leads to inaccurate attribute assignment. 
+          For instance, attributes like "sunglasses" and "necklace" may mistakenly appear on the wrong subject. 
+          To mitigate this issue, we first remove ambiguous modifiers, producing a relatively clean image that preserves the original layout. 
+          Subsequently, we perform progressive detail injection, ensuring that each attribute is added precisely to its corresponding subject's region. 
+          The prompts below each image indicate the input used for generating that branch, and the second row showcases the effectiveness of our method under style combination scenarios. 
+          It is worth noting that all four branches are generated in parallel.
+        </h2>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- End paradigm image -->
+  <br>
+
+  <!-- Paradigm image -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Method</h2>
+        <!-- <div class="columns is-centered has-text-centered"> -->
+        <img src="static/images/method.jpg" alt="Paradigm Image" height="100%" />
+        <h2 class="content has-text-justified">
+          <b>Overview of Detail++.</b> Our method consists of a large framework, Progressive Detail Injection(PDI), 
+          and test-time attention nurturing based on Centroid Alignment Loss. The sub-prompts, decomposed by spaCy, 
+          are first passed through U-Net for parallel inference. In each denoising step, the resulting batch of latents undergoes 
+          Accumulative Latent Modification (ALM), modifying the only region current adding attribute corresponding to. 
+          Note that, in our framework, the self-attention map for all branches is unified, which ensure the consistent layout, avoiding conflict of editing effects.
+        </h2>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- End paradigm image -->
+  <br>
+  <br>
+  
+  <!-- Qualitative image -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Qualitative Comparison</h2>
+        <!-- <div class="columns is-centered has-text-centered"> -->
+        <img src="static/images/qualitative.png" alt="Paradigm Image" height="100%" />
+        <h2 class="content has-text-justified">
+          <b>Qualitative comparison based on complex prompts including attributes of object, color, texture and style.</b> 
+          For prompt with multiple attributes, our method effectively avoid the problem of semantic mismatching and overflow.
+          It is worth noting that only our method can handle the problem of style blending well.
+        </h2>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- End paradigm image -->
+  <br>
+  <br>
+
+  <!-- Image carousel -->
+  <section id="Gallery" class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Gallery</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-image1">
+            <img src="static/images/carousel1.png" alt="Image 1" height="100%">
+          </div>
+          <div class="item item-image2">
+            <img src="static/images/carousel2.png" alt="Image 2" height="100%">
+          </div>
+          <div class="item item-image3">
+            <img src="static/images/carousel3.png" alt="Image 3" height="100%">
+          </div>
+        </div>
+        <!-- Description below the carousel -->
+        <div class="carousel-description">
+          <p><b>Some results visualization.</b> Here are some examples with complex prompt generated by our method. 
+            For each image pair, the left image is the result of baseline, and the left image is the result of our method.
+            It can be easily found that our method can generate more accurate results with less semantic overflow and mismatched attributes.
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
