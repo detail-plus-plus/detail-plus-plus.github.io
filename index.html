@@ -171,9 +171,9 @@
       <div class="hero-body">
         <img src="static/images/teaser.png" alt="Teaser Image" height="100%" />
           <b>A comparison between our method and current state-of-the-art generative models.</b> 
-          The mainstream models often suffer from issues such as semantic overflow, complex attribute mismatching, and style blending. 
-          Even Flux, the leading generative model under the DiT framework, struggles to overcome these challenges. 
-          In contrast, our method, Detail++, based on SDXL, achieves highly accurate semantic binding in a <b><i>training-free</i></b> way.
+          The mainstream models often suffer from issues such as semantic overflow, complex attribute mismatching, and style blending. Even Flux, the leading generative model under
+          the DiT framework, struggles to overcome these challenges. In contrast, our method, Detail++, based on SDXL, achieves highly accurate
+          semantic binding in <b><i>training-free</i></b> way.
         </h2>
       </div>
     </div>
@@ -188,16 +188,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Although Text-to-Image (T2I) models have achieved remarkable progress, they still struggle with <b>semantic binding</b>
-              —accurately associating correct attributes with their corresponding subjects in complex prompts. 
-              Existing approaches depend on extensive fine-tuning and user involvement, yet they fail to resolve issues such as attribute overflow and mismatched bindings. 
-              To address these limitations, we propose Detail++, a <b>training-free</b> method that integrates a novel Progressive Detail Injection (PDI) 
-              framework with Centroid Alignment Loss for fine-grained T2I generation. Our method is motivated by the observation that 
-              Self-Attention (SA) maps in Diffusion U-Net preserve structural layout while neglecting decorative details. 
-              Based on this insight, we fix the SA maps and remove all attributes from the prompt, 
-              then progressively reintroduce them one at a time to avoid confusion. 
-              Extensive experiments on T2I-CompBench and our proposed style composition benchmark validate the effectiveness of Detai, 
-              demonstrating its advantages in scenarios with multiple objects and styles where previous methods fall short. 
+              Recent advances in text-to-image (T2I) generation have led to impressive visual results. However, these models still face significant challenges when handling complex prompts—particularly those involving multiple subjects with distinct attributes. Inspired by the human drawing process, which first outlines the composition and then incrementally adds details, we propose Detail++, a training-free framework that introduces a novel Progressive Detail Injection (PDI) strategy to address this limitation. Specifically, we decompose a complex prompt into a sequence of simplified sub-prompts, guiding the generation process in stages. This staged generation leverages the inherent layout-controlling capacity of self-attention to first ensure global composition, followed by precise refinement. To achieve accurate binding between attributes and corresponding subjects, we exploit cross-attention mechanisms and further introduce a Centroid Alignment Loss at test time to reduce binding noise and enhance attribute consistency. Extensive experiments on T2I-CompBench and a newly constructed style composition benchmark demonstrate that Detail++ significantly outperforms existing methods, particularly in scenarios involving multiple objects and complex stylistic conditions.
             </p>
           </div>
         </div>
@@ -217,11 +208,7 @@
         <!-- <div class="columns is-centered has-text-centered"> -->
         <img src="static/images/overview.png" alt="Paradigm Image" height="100%" />
         <h2 class="content has-text-justified">
-          <b>The basic process of our method. </b>In the first column, generating complex prompts in a single branch often leads to inaccurate attribute assignment. 
-          For instance, attributes like "sunglasses" and "necklace" may mistakenly appear on the wrong subject. 
-          To mitigate this issue, we first remove ambiguous modifiers, producing a relatively clean image that preserves the original layout. 
-          Subsequently, we perform progressive detail injection, ensuring that each attribute is added precisely to its corresponding subject's region. 
-          The prompts below each image indicate the input used for generating that branch, and the second row showcases the effectiveness of our method under style combination scenarios. 
+          <b>The basic process of Detail++.</b> As shown in the first column, generating complex prompts in a single branch often results in inaccurate or blended attribute assignments. For example, attributes such as "sunglasses" and "necklace" may be mistakenly applied to the wrong subject. Our method addresses this challenge through a progressive approach: we first ignore all complex modifiers to produce a rough generation base, then systematically inject details to ensure each attribute is precisely added to its corresponding subject region. The prompt displayed below each image indicates the input used for that specific branch, and the second row demonstrates the method's effectiveness in style combination scenarios. Note that all four branches here are generated in parallel.
           It is worth noting that all four branches are generated in parallel.
         </h2>
       </div>
@@ -239,11 +226,7 @@
         <!-- <div class="columns is-centered has-text-centered"> -->
         <img src="static/images/method.jpg" alt="Paradigm Image" height="100%" />
         <h2 class="content has-text-justified">
-          <b>Overview of Detail++.</b> Our method consists of a large framework, Progressive Detail Injection(PDI), 
-          and test-time attention nurturing based on Centroid Alignment Loss. The sub-prompts, decomposed by spaCy, 
-          are first passed through U-Net for parallel inference. In each denoising step, the resulting batch of latents undergoes 
-          Accumulative Latent Modification (ALM), modifying the only region current adding attribute corresponding to. 
-          Note that, in our framework, the self-attention map for all branches is unified, which ensure the consistent layout, avoiding conflict of editing effects.
+          <b>Overview of Detail++.</b> Our method consists of a large framework, Progressive Detail Injection(PDI), and test-time attention nurturing based on Centroid Alignment Loss. The sub-prompts, decomposed by spaCy, are togather passed through U-Net for parallel inference. In each denoising step, the resulting batch of latents undergoes Accumulative Latent Modification (ALM), modifying the only region current adding attribute corresponding to. Note that, in our framework, the self-attention maps for all branches are unified, which ensure the consistent layout, avoiding conflict of editing effects.
         </h2>
       </div>
     </div>
